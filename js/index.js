@@ -1,4 +1,6 @@
-var count = 1.4;
+var range = 1.5;
+var count = 0;
+var timer = null;
 var origin = [
     [1, 2, 3, 4, 5, 6, 7, 8, 9],
     [4, 5, 6, 7, 8, 9, 1, 2, 3],
@@ -11,10 +13,9 @@ var origin = [
     [8, 9, 7, 2, 3, 1, 5, 6, 4]
 ];
 $(document).ready(function () {
-    cc(origin);
+    ChangeTab(origin);
 })
-var ccxx = 0;
-var timer = null;
+
 function getHtml2Canvas() {
     html2canvas(document.getElementById('tab')).then(function (canvas) {
         var a = document.createElement('a');
@@ -23,13 +24,13 @@ function getHtml2Canvas() {
         a.click();
     });
 };
-function cc(origin) {
+function ChangeTab(origin) {
     clearInterval(timer);
     var _html = "";
     $.each(origin, function (i, v) {
         _html += '<tr>';
         $.each(v, function (index, val) {
-            if (Math.random() * count > 1) {
+            if (Math.random() * range > 1) {
                 _html += '<td><input type="text" /></td>'
             } else {
                 _html += '<td>' + val + '</td>'
@@ -39,21 +40,21 @@ function cc(origin) {
         _html += '</tr>';
     });
     $("#tb").html(_html);
-    ccxx = 0;
+    count = 0;
     timer = setInterval(function () {
-        $("#times").html(ccxx++);
+        $("#times").html(count++);
     }, 1000);
 }
-function chagness(c) {
+function RandomChangeTab(c) {
     if (c) {
-        count = c;
+        range = c;
     }
     var num = 100;
     var o = origin;
     for (var i = 0; i < num; i++) {
         o = change(o, parseInt(Math.random().toString()[3]), parseInt(Math.random().toString()[4]), i % 2);
     }
-    cc(o);
+    ChangeTab(o);
 }
 function change(origin, index1, index2, type) {
     type = !!type || false;//true:行交换 false:列交换
@@ -120,6 +121,7 @@ function checkAll() {
 
 
     }
+    //alert("恭喜你，完成！");
     return true;
 
 }

@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="style/index.css">
+	<link rel="stylesheet" href="style/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/css/index.css">
 	<script src="js/plugins/jquery.min.js"></script>
 	<script src="js/plugins/html2canvas.min.js"></script>
 	<script src="js/index.js"></script>
@@ -17,14 +18,15 @@
 		</tbody>
 	</table>
 	<ul>
-		<li><a href="javascript:void(0);" onclick="chagness(1.4)">初级</a></li>
-		<li><a href="javascript:void(0);" onclick="chagness(2)">中级</a></li>
-		<li><a href="javascript:void(0);" onclick="chagness(2.5)">高级</a></li>
-		<li><a href="javascript:void(0);" onclick="chagness()">换一个</a></li>
-		<li><a href="javascript:void(0);" onclick="javascript:if(!checkAll()){alert('cuo')}">检查</a></li>
-		<li><a href="javascript:void(0);" id="times">0</a></li>
+		<li><a href="javascript:void(0);" onclick="RandomChangeTab(1.5)">初级</a></li>
+		<li><a href="javascript:void(0);" onclick="RandomChangeTab(2)">中级</a></li>
+		<li><a href="javascript:void(0);" onclick="RandomChangeTab(2.5)">高级</a></li>
+		<li><a href="javascript:void(0);" onclick="RandomChangeTab()">换一个</a></li>
+		<li><a href="javascript:void(0);" onclick="javascript:if(!checkAll()){alert('请认真检查哦！')}">检查</a></li>
+		<li><a href="javascript:void(0);">用时：<span id="times" style="color:blue;text-decoration:underline;">0</span></a></li>
 		<li><a href="javascript:void(0);" id="odownLoad" onclick="getHtml2Canvas()">下载</a></li>
-	</ul>
+		<li><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=06e8q7qwsr2n-aCmvZOiov2wvL4" style="text-decoration:none;">给我写信吧</li>
+	</ul>	
 </body>
 
 </html>

@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 ul li {
-    list-style: none;
     float: left;
 }
 
 ul li a {
+    color: #333;
     padding: 0 10px;
 }
 

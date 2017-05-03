@@ -1,0 +1,15 @@
+// // Sass configuration
+// {
+//     "version": "0.1.0",
+//     "command": "node-sass",
+//     "isShellCommand": true,
+//     "args": ["styles.scss", "styles.css"]
+// }
+
+// Less configuration
+{
+    "version": "0.1.0",
+    "command": "lessc",
+    "isShellCommand": true,
+    "args": ["styles.less", "styles.css"]
+}
